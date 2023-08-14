@@ -1,0 +1,19 @@
+{
+    "name": "glTFastDemo.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7b62e07dfb0974cd9bfe044ee746bc12",
+        "GUID:0145d4bfef64a47a6998966ce9e88778"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

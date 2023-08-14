@@ -1,0 +1,60 @@
+{
+    "name": "glTFastDemo",
+    "rootNamespace": "",
+    "references": [
+        "glTFast",
+        "glTFast.dots",
+        "glTFast.Export",
+        "glTFastEditor",
+        "glTF-test-framework",
+        "glTF-test-framework.Sample",
+        "UnityGLTFScripts",
+        "GLTFSerialization",
+        "Unity.RenderPipelines.HighDefinition.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.rendering.hybrid",
+            "expression": "0.10.0",
+            "define": "UNITY_DOTS_HYBRID"
+        },
+        {
+            "name": "com.atteneder.gltfast",
+            "expression": "0.0.0",
+            "define": "GLTFAST"
+        },
+        {
+            "name": "com.atteneder.gltfast",
+            "expression": "4.0",
+            "define": "GLTFAST_4_OR_NEWER"
+        },
+        {
+            "name": "com.atteneder.gltfast",
+            "expression": "4.8",
+            "define": "GLTFAST_5_OR_NEWER"
+        },
+        {
+            "name": "org.khronos.unitygltf",
+            "expression": "1.0.0",
+            "define": "UNITY_GLTF"
+        },
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "1.0.0",
+            "define": "UNITY_HDRP"
+        },
+        {
+            "name": "com.unity.modules.imgui",
+            "expression": "",
+            "define": "UNITY_IMGUI"
+        }
+    ],
+    "noEngineReferences": false
+}

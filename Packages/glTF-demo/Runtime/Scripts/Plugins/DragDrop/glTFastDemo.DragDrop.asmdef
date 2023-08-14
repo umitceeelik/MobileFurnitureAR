@@ -1,0 +1,30 @@
+{
+    "name": "glTFastDemo.DragDrop",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "Android",
+        "iOS",
+        "WSA",
+        "WebGL"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.modules.imgui",
+            "expression": "",
+            "define": "UNITY_IMGUI"
+        },
+        {
+            "name": "com.unity.modules.imageconversion",
+            "expression": "",
+            "define": "UNITY_IMAGECONVERSION"
+        }
+    ],
+    "noEngineReferences": false
+}
