@@ -1,3 +1,4 @@
+using AtlasSpace.World;
 using GLTFast;
 using System;
 using System.Collections;
@@ -57,6 +58,7 @@ namespace AR
             {
                 Instance = this;
             }
+            gltfAsset.Url = GetParameterWithUrl.Instance.FinalProductUrl;
             //arObjectToSpawn = FindObjectOfType<LoadSceneWithARCamera>().ARObject;
         }
 

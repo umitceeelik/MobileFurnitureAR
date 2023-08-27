@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 355500796449238290}
   - component: {fileID: 3022755793989040932}
   - component: {fileID: 7824195775046930727}
+  - component: {fileID: 7339742869904002229}
   m_Layer: 5
   m_Name: MiniProduct
   m_TagString: Untagged
@@ -96,6 +97,21 @@ MonoBehaviour:
   m_UseGraphicAlpha: 1
   iterations: 5
   shadowSpread: {x: -2.35, y: 8.19}
+--- !u!114 &7339742869904002229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320275499675064649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7d68c4377a90b4193acaa1c07d360c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productImage: {fileID: 5926249346270199903}
+  productName: 
+  companyName: 
 --- !u!1 &5704783703393458756
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8759842800828736104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7339742869904002229}
+        m_TargetAssemblyTypeName: ProductController, Assembly-CSharp
+        m_MethodName: OpenARScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8241714144180422092
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,10 +443,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5138246749246785558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6805848589161235612
 CanvasRenderer:

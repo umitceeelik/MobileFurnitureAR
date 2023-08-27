@@ -1,3 +1,4 @@
+using AtlasSpace.World;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class SetFramerate : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("Sample", LoadSceneMode.Single);
+        GetParameterWithUrl.Instance.IsBackFromARScene = true;
+        SceneManager.LoadScene("Main");
     }
 }
