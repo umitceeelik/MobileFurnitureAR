@@ -11,6 +11,7 @@ public class ProductController : MonoBehaviour
     public Image productImage;
     public string productName;
     public string companyName;
+    public TextMeshProUGUI productText;
 
     private GetParameterWithUrl getParameterWithUrl;
 

@@ -88,7 +88,8 @@ namespace AR
                 //{
                 //text.text = gltfAsset.transform.GetChild(0).name;
                 //arObjectToSpawn = gltfAsset.gameObject;
-                //StartCoroutine(ARPlaceObject());
+                StartCoroutine(ARPlaceObject());
+                UIController.Instance.ObjectPlacementSetter(false);
                 //}
             }
 

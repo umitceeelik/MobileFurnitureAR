@@ -51,6 +51,7 @@ public class CompanyController : MonoBehaviour
                     ProductController productController = createdProduct.GetComponent<ProductController>();
                     productList.Add(productController);
                     productController.productName = furniture.Name;
+                    productController.productText.text = furniture.Name;
                     productController.companyName = companyName.text;
 
                     using (UnityWebRequest webRequest = UnityWebRequestTexture.GetTexture(furniture.ObjectImageUrl))

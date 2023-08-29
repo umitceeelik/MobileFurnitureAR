@@ -112,6 +112,7 @@ MonoBehaviour:
   productImage: {fileID: 5926249346270199903}
   productName: 
   companyName: 
+  productText: {fileID: 8835216240735713417}
 --- !u!1 &5704783703393458756
 GameObject:
   m_ObjectHideFlags: 0
