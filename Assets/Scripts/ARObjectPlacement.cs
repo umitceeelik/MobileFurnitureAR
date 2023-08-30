@@ -1,5 +1,6 @@
 using AtlasSpace.World;
 using GLTFast;
+using Lean.Touch;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 namespace AR
 {
@@ -51,6 +53,12 @@ namespace AR
         [SerializeField] GameObject loadingBar;
         [SerializeField] TextMeshProUGUI loadingBarText;
         [SerializeField] UnityEngine.UI.Image loadingBarImg;
+
+
+        private float speedModifier = 0.0005f;
+        private Vector3 translationVector;
+        private float previousRotationAngle = 0f;
+        private float currentRotationAngle = 0f;
 
         private void Awake()
         {
@@ -99,7 +107,18 @@ namespace AR
                 UpdatePlacementIndicator();
             }
 
+            //// Object movement logic within the Update function
+            //if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null & !Input.GetTouch(0).position.IsPointOverUIObject())
+            //{
 
+            //    // Convert X-Y touch movement to object translation in world space
+            //    translationVector = new Vector3(Camera.main.transform.forward.x, 0f, Camera.main.transform.forward.z);
+            //    spawnedObject.transform.Translate(translationVector * Input.GetTouch(0).deltaPosition.y * speedModifier, Space.World);
+
+            //    translationVector = new Vector3(Camera.main.transform.right.x, 0f, Camera.main.transform.right.z);
+            //    spawnedObject.transform.Translate(translationVector * Input.GetTouch(0).deltaPosition.x * speedModifier, Space.World);
+
+            //}
         }
 
         public void SPAWN()
@@ -173,6 +192,11 @@ namespace AR
             aRPlaneManager.enabled = false;
             aRRaycastManager.enabled = false;
             UIController.Instance.scanUI.SetActive(false);
+            aRPlaneManager.enabled = false;
+            foreach (ARPlane plane in aRPlaneManager.trackables)
+            {
+                plane.gameObject.SetActive(aRPlaneManager.enabled);
+            }
         }
 
         public void ARPlaceObject2()
@@ -268,6 +292,10 @@ namespace AR
                 {
                     loadingBar.SetActive(false);
                     arObjectToSpawn = transform.GetChild(1).gameObject;
+                    arObjectToSpawn.AddComponent<LeanDragTranslate>();
+                    arObjectToSpawn.AddComponent<LeanTwistRotateAxis>();
+                    arObjectToSpawn.GetComponent<LeanTwistRotateAxis>().Axis = new Vector3(0,0,-1);
+                    //arObjectToSpawn.AddComponent<LeanPinchScale>();
                     isLoadedObject = true;
                 }
 
